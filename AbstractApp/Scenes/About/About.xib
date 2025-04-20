@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="AbstractApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXj-sk-Sjk">
+                    <rect key="frame" x="20" y="79" width="353" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="htK-1o-8sb">
+                    <rect key="frame" x="353" y="87.666666666666657" width="20" height="15"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="AF0-d2-Q4k"/>
+                        <constraint firstAttribute="width" constant="20" id="pWq-gx-Yps"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="9kO-Lq-RDc" appends="YES" id="UvD-0E-C3B"/>
+                    </connections>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mvy-RZ-nLV">
+                    <rect key="frame" x="26" y="211" width="347" height="298"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <string key="text">DESENVOLVIMENTO WEB E MOBILE - FULL STACKDesenvolvido por:Bruno de Mattos BarrosFelipe de Andrade NevesFrederico Gomes EspindolaLara Medeiros de FreitasPara a disciplina:Programação Mobile com iOSSob orientação do Professor:Silvano Maneck Malfatti </string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eXj-sk-Sjk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="5mQ-xG-Kv6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eXj-sk-Sjk" secondAttribute="trailing" constant="20" id="8xi-nf-viu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mvy-RZ-nLV" secondAttribute="trailing" constant="20" id="Vqu-5W-G5l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mvy-RZ-nLV" secondAttribute="bottom" constant="309" id="bbm-oV-NDi"/>
+                <constraint firstItem="mvy-RZ-nLV" firstAttribute="top" secondItem="eXj-sk-Sjk" secondAttribute="bottom" constant="100" id="cF8-q2-hkD"/>
+                <constraint firstItem="eXj-sk-Sjk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fNi-J2-HTP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="htK-1o-8sb" secondAttribute="trailing" constant="20" id="pPn-Me-j9q"/>
+                <constraint firstItem="htK-1o-8sb" firstAttribute="centerY" secondItem="eXj-sk-Sjk" secondAttribute="centerY" id="tpS-u0-Nea"/>
+                <constraint firstItem="mvy-RZ-nLV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="yAd-pO-Y7Q"/>
+            </constraints>
+            <point key="canvasLocation" x="139.69465648854961" y="20.422535211267608"/>
+        </view>
+        <tapGestureRecognizer id="9kO-Lq-RDc">
+            <connections>
+                <action selector="handleClose:" destination="-1" id="EMN-Md-kUr"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
